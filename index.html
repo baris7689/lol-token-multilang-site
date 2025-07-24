@@ -2,53 +2,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LoL Token - Gülenlerin Devrimi</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #fffbe6; color: #333; text-align: center; padding: 30px; }
-        .language-selector button { margin: 5px; padding: 8px 12px; font-size: 16px; cursor: pointer; }
-        h1 { font-size: 32px; margin-top: 30px; }
-        p { font-size: 20px; margin-top: 20px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOL Token - Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="language-selector">
-        <button onclick="setLanguage('tr')">🇹🇷 TR</button>
-        <button onclick="setLanguage('en')">🇬🇧 EN</button>
-        <button onclick="setLanguage('de')">🇩🇪 DE</button>
-        <button onclick="setLanguage('fr')">🇫🇷 FR</button>
-        <button onclick="setLanguage('es')">🇪🇸 ES</button>
-        <button onclick="setLanguage('ja')">🇯🇵 JA</button>
-        <button onclick="setLanguage('zh')">🇨🇳 ZH</button>
+  <header class="fade-in">
+    <h1>🤣 Welcome to LOL Token</h1>
+    <nav>
+      <a href="staking.html">Staking</a> |
+      <a href="roadmap.html">Yol Haritası</a> |
+      <a href="airdrop.html">Airdrop</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mascot-bounce">
+      <img src="images/lol-alien.png" alt="LOL Alien Mascot" />
+      <p>🪧 Tell Your Story, Earn LOL!</p>
     </div>
+    <div class="emoji-float">
+      <span>😂</span><span>😜</span><span>😎</span><span>🤣</span>
+    </div>
+    <a href="staking.html" class="btn rainbow-button">🔒 Go to Staking</a>
+  </main>
 
-    <h1 
-        data-tr="Gülenlerin Devrimi Başlıyor!" 
-        data-en="The Revolution of the Laughing Begins!"
-        data-de="Die Revolution des Lachens beginnt!"
-        data-fr="La révolution du rire commence !"
-        data-es="¡Comienza la revolución de la risa!"
-        data-ja="笑いの革命が始まる！"
-        data-zh="欢笑的革命开始了！"
-    ></h1>
-
-    <p 
-        data-tr="Hikayeni paylaş, LOL Token kazan!" 
-        data-en="Share your story, earn LOL Tokens!"
-        data-de="Teile deine Geschichte, verdiene LOL-Token!"
-        data-fr="Partage ton histoire, gagne des jetons LOL !"
-        data-es="Comparte tu historia, gana tokens LOL!"
-        data-ja="あなたの物語を共有して、LOLトークンを獲得しよう！"
-        data-zh="分享你的故事，赚取LOL代币！"
-    ></p>
-
-    <script>
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-tr]').forEach(el => {
-                const text = el.getAttribute(`data-${lang}`);
-                if (text) el.textContent = text;
-            });
-        }
-    </script>
+  <footer><p>🌍 Laugh in Every Language!</p></footer>
 </body>
 </html>

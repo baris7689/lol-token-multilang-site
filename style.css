@@ -1,0 +1,53 @@
+
+body {
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  background: linear-gradient(135deg, #fce4ec, #fff3f0);
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #f8bbd0;
+  padding: 1rem;
+}
+nav a {
+  margin: 0 1rem;
+  font-weight: bold;
+  color: #4a148c;
+}
+main {
+  padding: 2rem;
+}
+.mascot-bounce img {
+  width: 150px;
+  animation: bounce 2s infinite;
+}
+.emoji-float span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  animation: float 3s infinite ease-in-out;
+}
+.staking-box {
+  background: #ffe4f3;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+.btn, button {
+  padding: 0.5rem 1rem;
+  background: #ec407a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
