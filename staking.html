@@ -1,26 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LOL Token - Staking</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff0f5; font-family: sans-serif; text-align: center; }
+    .box { margin: 5% auto; max-width: 400px; padding: 2rem; background: #ffe4f3; border-radius: 10px; }
+    input, button { padding: 1rem; font-size: 1rem; margin: 0.5rem; }
+  </style>
 </head>
 <body>
-  <header><h1>🔐 Staking Paneli</h1><a href="index.html">⬅ Ana Sayfa</a></header>
-  <main>
-    <div class="staking-box">
-      <label>Stake Miktarı:</label>
-      <input type="number" id="stake" placeholder="1000 LOL" />
-      <button onclick="calculate()">Stake Et</button>
-      <p id="result">Kazanç: 0 LOL/ay</p>
-    </div>
-  </main>
+  <h1>🔒 LOL Token Staking</h1>
+  <div class="box">
+    <p>Stake etmek istediğiniz miktarı girin:</p>
+    <input type="number" id="stakeAmount" placeholder="Örn: 1000 LOL" />
+    <button onclick="calculate()">Stake Et</button>
+    <p id="result">📈 Tahmini kazanç: 0 LOL / ay</p>
+  </div>
   <script>
     function calculate() {
-      const val = parseFloat(document.getElementById("stake").value);
-      document.getElementById("result").textContent = "Kazanç: " + (val * 0.08).toFixed(0) + " LOL/ay";
+      const val = parseFloat(document.getElementById('stakeAmount').value);
+      const result = isNaN(val) ? 0 : Math.floor(val * 0.08);
+      document.getElementById('result').innerText = `📈 Tahmini kazanç: ${result} LOL / ay`;
     }
   </script>
 </body>
